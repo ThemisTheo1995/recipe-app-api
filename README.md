@@ -12,6 +12,6 @@ recipe app🍕.
 - Make sure Docker is installed: `docker --version`
 - Generate the docker image: `docker build .`
 - Generate the containers: `docker compose build`
-- Server up and running: `docker compose run --rm app sh -c "python manage.py runserver`
+- Server up and running: `docker compose run --rm app sh -c "python manage.py runserver"`
 
 That's everything you shall need to run this project locally.
