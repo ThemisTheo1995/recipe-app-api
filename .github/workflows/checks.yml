@@ -21,7 +21,7 @@ jobs:
         run: docker-compose run --rm app sh -c "flake8"
       - name: Generate coverage report
         run: |
-          pip install pytest
-          pip install pytest-cov
-          pytest --cov=./ --cov-report=xml
+            docker-compose run --rm app sh -c "pip install pytest"
+            docker-compose run --rm app sh -c "pip install pytest-cov"
+            docker-compose run --rm app sh -c "pytest --cov"
 
