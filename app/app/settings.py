@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Installed apps
     'rest_framework',
+    'rest_framework.authtoken',
     'drf_spectacular',
     # Local
     'core',
@@ -138,4 +139,10 @@ AUTH_USER_MODEL = 'core.User'
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'SWAGGER_UI_FAVICON_HREF': 'https://img.icons8.com/external-flaticons-lineal-color-flat-icons/344/external-recipe-foodies-flaticons-lineal-color-flat-icons.png',  # noqa E501
+    'TITLE': 'Recipe api',
+    'DESCRIPTION': 'Simple recipe API, created by Django DRF',
 }
