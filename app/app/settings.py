@@ -150,4 +150,5 @@ SPECTACULAR_SETTINGS = {
     'SWAGGER_UI_FAVICON_HREF': 'https://img.icons8.com/external-flaticons-lineal-color-flat-icons/344/external-recipe-foodies-flaticons-lineal-color-flat-icons.png',  # noqa E501
     'TITLE': 'Recipe api',
     'DESCRIPTION': 'Simple recipe API, created by Django DRF',
+    'COMPONENT_SPLIT_REQUEST': True,
 }
