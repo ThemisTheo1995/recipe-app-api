@@ -48,7 +48,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 class Recipe(models.Model):
     """Recipe object."""
     class Meta:
-        verbose_name_plural = 'Recipies'
+        verbose_name_plural = 'Recipes'
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
