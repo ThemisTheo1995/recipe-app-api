@@ -99,7 +99,7 @@ class PrivateIngredientsApiTests(TestCase):
 
     def test_filter_ingredients_assigned_to_recipes(self):
         """Test listing ingredients by those assigned to recipes."""
-        in1 = Ingredient.objects.create(user=self.user, name='Appled')
+        in1 = Ingredient.objects.create(user=self.user, name='Apple')
         in2 = Ingredient.objects.create(user=self.user, name='Turkey')
         recipe = Recipe.objects.create(
             title='Apple Crumble',
@@ -114,7 +114,7 @@ class PrivateIngredientsApiTests(TestCase):
         s1 = IngredientSerializer(in1)
         s2 = IngredientSerializer(in2)
         self.assertIn(s1.data, res.data)
-        self.assertIn(s2.data, res.data)
+        self.assertNotIn(s2.data, res.data)
 
     def test_filtered_ingredients_unique(self):
         """Test filtered ingredients returns a unique list."""
